@@ -1,0 +1,127 @@
+🎨 Konsep Tampilan 
+    • Tema warna: hijau (khas madrasah), putih, dan sedikit abu-abu muda untuk latar.
+    • Header atas: logo Kemenag & MTs Negeri 1 Banjarnegara, judul PPDB ONLINE 2025/2026.
+    • Menu utama (horizontal di desktop, hamburger di mobile): Beranda | Alur Pendaftaran | Jadwal | Kuota | Daftar | Login | Pengumuman | Bantuan.
+    • Layout: full-screen responsif, elemen card dengan shadow lembut, tabel interaktif.
+    • User-friendly: step jelas, warna status berbeda (hijau = diterima, merah = ditolak, biru = proses).
+
+📌 Narasi Halaman Frontend (Sisi Pendaftar)
+1. Halaman Beranda
+    • Banner besar dengan teks: “Penerimaan Peserta Didik Baru (PPDB) Online MTs Negeri 1 Banjarnegara Tahun 2025/2026”.
+    • Info ringkas dalam kotak:
+        ◦ Jadwal penting (pendaftaran, verifikasi, pengumuman, daftar ulang).
+        ◦ Tombol hijau besar: DAFTAR SEKARANG.
+    • Bagian bawah: berita terbaru, pengumuman resmi dari panitia.
+
+2. Halaman Alur Pendaftaran
+    • Infografis step-by-step (ikon + teks), mirip PPDB Jateng:
+        1. Registrasi Akun
+        2. Login Sistem
+        3. Isi Formulir Online
+        4. Upload Dokumen
+        5. Verifikasi Data
+        6. Seleksi & Ranking
+        7. Pengumuman
+        8. Daftar Ulang
+
+3. Halaman Jadwal
+    • Tabel jadwal resmi:
+        ◦ Pendaftaran online: 10–15 Juni 2025
+        ◦ Verifikasi dokumen: 16–18 Juni 2025
+        ◦ Seleksi & Ranking: 19–22 Juni 2025
+        ◦ Pengumuman hasil: 23 Juni 2025
+        ◦ Daftar ulang: 25–27 Juni 2025
+    • Semua ditampilkan rapi seperti kalender sekolah.
+
+4. Halaman Kuota
+    • Tabel kuota penerimaan per jalur:
+        ◦ Jalur Prestasi Akademik → xx%
+        ◦ Jalur Prestasi Non-Akademik → xx%
+        ◦ Jalur Afirmasi (KIP/kurang mampu) → xx%
+    • Diagram pie untuk memvisualisasikan kuota.
+
+5. Halaman Pendaftaran
+    • Mirip form PPDB Jateng:
+        ◦ Step 1: Data Pribadi (NIK, nama, TTL, jenis kelamin, alamat, no HP).
+        ◦ Step 2: Data Sekolah Asal.
+        ◦ Step 3: Pilih Jalur (Prestasi Akademik / Non-Akademik / Afirmasi).
+        ◦ Step 4: Upload dokumen sesuai jalur.
+        ◦ Step 5: Konfirmasi & Kirim.
+    • Setelah submit, muncul Nomor Pendaftaran dan bisa Cetak Bukti Pendaftaran.
+
+6. Halaman Login Pendaftar
+    • Form username (NIK/Email) + password.
+    • Setelah login:
+        ◦ Bisa melihat status pendaftaran.
+        ◦ Edit data selama periode pendaftaran masih terbuka.
+        ◦ Lihat hasil verifikasi dokumen (valid/tidak valid).
+
+7. Halaman Pengumuman
+    • Kotak pencarian: Masukkan Nomor Pendaftaran.
+    • Hasil mirip PPDB Jateng:
+        ◦ Diterima → hijau, ada nama & nomor pendaftaran, jalur diterima, langkah daftar ulang.
+        ◦ Ditolak → merah, dengan alasan singkat.
+        ◦ Sedang diproses → biru.
+    • Tombol Cetak Hasil Pengumuman.
+
+8. Halaman Bantuan / FAQ
+    • Tanya-jawab ala accordion:
+        ◦ Bagaimana kalau lupa nomor pendaftaran?
+        ◦ Bagaimana cara memperbaiki data?
+        ◦ Dokumen apa yang wajib diunggah?
+    • Kontak panitia (nomor WA, email resmi, alamat sekolah).
+
+📌 Narasi Halaman Backend (Sisi Admin)
+1. Halaman Login Admin
+    • Form login dengan username & password.
+    • Role-based: super admin, verifikator, operator pengumuman.
+
+2. Dashboard Admin
+    • Statistik cepat: jumlah pendaftar, jalur terbanyak, status verifikasi.
+    • Grafik mirip PPDB Jateng: pendaftaran harian, jumlah pendaftar per jalur.
+    • Notifikasi: jumlah dokumen yang belum diverifikasi.
+
+3. Daftar Pendaftar
+    • Tabel dengan filter per jalur/status.
+    • Kolom: Nomor Pendaftaran, Nama, Asal Sekolah, Jalur, Skor Akhir, Status.
+    • Tombol aksi: Lihat Detail | Verifikasi | Edit Status.
+
+4. Detail Pendaftar
+    • Foto & data identitas.
+    • Tab:
+        ◦ Dokumen (dengan preview & tombol valid/tidak valid).
+        ◦ Nilai rapor / prestasi.
+        ◦ Status & catatan admin.
+    • Tombol ubah status: Diterima / Ditolak / Menunggu.
+
+5. Halaman Ranking & Seleksi
+    • Tabel ranking otomatis berdasarkan skor_akhir.
+    • Warna highlight untuk peringkat teratas sesuai kuota.
+    • Filter per jalur.
+    • Tombol “Export Excel / PDF”.
+
+6. Halaman Pengumuman
+    • Admin pilih siswa → ubah status → Publish hasil.
+    • Bisa upload pengumuman massal atau otomatis dari hasil ranking.
+
+7. Halaman Jurnal Pendaftar
+    • Laporan semua pendaftar dengan status akhir.
+    • Bisa dicetak sebagai laporan resmi.
+    • Ada log aktivitas admin (audit trail).
+
+8. Halaman Pengaturan
+    • Atur kuota jalur pendaftaran.
+    • Atur bobot skor.
+    • Atur tanggal-tanggal penting (batas pendaftaran, pengumuman).
+    • Atur template pengumuman & email.
+
+📌 Fitur 
+✅ Login akun pendaftar & admin.
+✅ Cetak bukti pendaftaran.
+✅ Upload dokumen sesuai jalur.
+✅ Verifikasi dokumen oleh panitia.
+✅ Ranking otomatis berdasarkan skor.
+✅ Pengumuman online dengan nomor pendaftaran.
+✅ Jadwal & kuota transparan.
+✅ Statistik pendaftar (frontend & backend).
+✅ FAQ & kontak panitia.
